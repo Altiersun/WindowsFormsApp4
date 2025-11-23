@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using WindowsFormsApp4;
 
@@ -10,6 +11,9 @@ namespace WindowsFormsApp4
         {
             InitializeComponent();
         }
+        private DataTable incomeTable;
+        private DataTable expenseTable;
+        private DataTable budgetTable;
 
         private void LoadForm(Form frm)
         {
@@ -40,7 +44,7 @@ namespace WindowsFormsApp4
 
         private void btnStats_Click(object sender, EventArgs e)
         {
-            LoadForm(new FormStats());
+            LoadForm(new FormStats(incomeTable, expenseTable, budgetTable));
             lblHeader.Text = "자료통계";
         }
     }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2965548F-439C-4ADF-AE01-587E4A4BF5E9}</ProjectGuid>
+    <ProjectGuid>{D24687DF-2251-4D90-9A0C-089E605318DE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsApp4</RootNamespace>
-    <AssemblyName>WindowsFormsApp4</AssemblyName>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -79,21 +79,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormBudget.resx">
-      <DependentUpon>FormBudget.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormExpense.resx">
-      <DependentUpon>FormExpense.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormIncome.resx">
-      <DependentUpon>FormIncome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormStats.resx">
-      <DependentUpon>FormStats.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

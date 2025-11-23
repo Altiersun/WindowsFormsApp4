@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp4
+﻿namespace WindowsFormsApp1
 {
     partial class FormStats
     {
@@ -30,8 +30,8 @@
         #region Windows Form Designer generated code
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelTop = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelFilter = new System.Windows.Forms.Panel();
@@ -127,7 +127,6 @@
             this.btnLoad.TabIndex = 2;
             this.btnLoad.Text = "통계 불러오기";
             this.btnLoad.UseVisualStyleBackColor = false;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // lblIncomeTotal
             // 
@@ -158,14 +157,14 @@
             // 
             // chartStats
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartStats.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.chartStats.ChartAreas.Add(chartArea2);
             this.chartStats.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartStats.Location = new System.Drawing.Point(0, 165);
             this.chartStats.Name = "chartStats";
-            series1.ChartArea = "ChartArea1";
-            series1.Name = "Series1";
-            this.chartStats.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Name = "Series1";
+            this.chartStats.Series.Add(series2);
             this.chartStats.Size = new System.Drawing.Size(800, 435);
             this.chartStats.TabIndex = 0;
             // 

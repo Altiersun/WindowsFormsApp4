@@ -1,6 +1,6 @@
-﻿namespace WindowsFormsApp4
+﻿namespace WindowsFormsApp1
 {
-    partial class FormExpense
+    partial class FormIncome
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -8,7 +8,6 @@
         private System.Windows.Forms.Label lblTitle;
 
         private System.Windows.Forms.Panel panelInput;
-
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Label lblAmount;
@@ -23,7 +22,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
 
-        private System.Windows.Forms.DataGridView dgvExpense;
+        private System.Windows.Forms.DataGridView dgvIncome;
 
         protected override void Dispose(bool disposing)
         {
@@ -34,11 +33,10 @@
             base.Dispose(disposing);
         }
 
-
         #region Windows Form Designer generated code
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelInput = new System.Windows.Forms.Panel();
@@ -53,15 +51,15 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.dgvExpense = new System.Windows.Forms.DataGridView();
+            this.dgvIncome = new System.Windows.Forms.DataGridView();
             this.panelTop.SuspendLayout();
             this.panelInput.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExpense)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIncome)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.IndianRed;
+            this.panelTop.BackColor = System.Drawing.Color.SteelBlue;
             this.panelTop.Controls.Add(this.lblTitle);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
@@ -78,7 +76,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(290, 45);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "💸 지출 내역 관리";
+            this.lblTitle.Text = "📘 수입 내역 관리";
             // 
             // panelInput
             // 
@@ -98,7 +96,7 @@
             this.panelInput.Location = new System.Drawing.Point(0, 55);
             this.panelInput.Name = "panelInput";
             this.panelInput.Padding = new System.Windows.Forms.Padding(20);
-            this.panelInput.Size = new System.Drawing.Size(800, 170);
+            this.panelInput.Size = new System.Drawing.Size(800, 160);
             this.panelInput.TabIndex = 1;
             // 
             // lblDate
@@ -150,13 +148,9 @@
             this.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategory.Font = new System.Drawing.Font("맑은 고딕", 10F);
             this.cmbCategory.Items.AddRange(new object[] {
-            "식비",
-            "교통비",
-            "주거비",
-            "교육",
-            "취미",
-            "의료",
-            "쇼핑",
+            "월급",
+            "용돈",
+            "보너스",
             "기타"});
             this.cmbCategory.Location = new System.Drawing.Point(110, 57);
             this.cmbCategory.Name = "cmbCategory";
@@ -177,7 +171,7 @@
             this.txtMemo.Location = new System.Drawing.Point(350, 50);
             this.txtMemo.Multiline = true;
             this.txtMemo.Name = "txtMemo";
-            this.txtMemo.Size = new System.Drawing.Size(300, 80);
+            this.txtMemo.Size = new System.Drawing.Size(280, 80);
             this.txtMemo.TabIndex = 7;
             // 
             // btnAdd
@@ -186,26 +180,24 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Location = new System.Drawing.Point(680, 20);
+            this.btnAdd.Location = new System.Drawing.Point(660, 25);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(90, 35);
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "추가";
             this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Silver;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
-            this.btnUpdate.Location = new System.Drawing.Point(680, 65);
+            this.btnUpdate.Location = new System.Drawing.Point(660, 65);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(90, 35);
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "수정";
             this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -213,51 +205,49 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("맑은 고딕", 10F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(680, 110);
+            this.btnDelete.Location = new System.Drawing.Point(660, 105);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(90, 35);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // dgvExpense
+            // dgvIncome
             // 
-            this.dgvExpense.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvExpense.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvExpense.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvExpense.ColumnHeadersHeight = 36;
-            this.dgvExpense.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvExpense.EnableHeadersVisualStyles = false;
-            this.dgvExpense.Location = new System.Drawing.Point(0, 225);
-            this.dgvExpense.Name = "dgvExpense";
-            this.dgvExpense.RowHeadersWidth = 62;
-            this.dgvExpense.RowTemplate.Height = 28;
-            this.dgvExpense.Size = new System.Drawing.Size(800, 375);
-            this.dgvExpense.TabIndex = 0;
-            this.dgvExpense.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExpense_CellClick);
+            this.dgvIncome.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvIncome.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIncome.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvIncome.ColumnHeadersHeight = 36;
+            this.dgvIncome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvIncome.EnableHeadersVisualStyles = false;
+            this.dgvIncome.Location = new System.Drawing.Point(0, 215);
+            this.dgvIncome.Name = "dgvIncome";
+            this.dgvIncome.RowHeadersWidth = 62;
+            this.dgvIncome.RowTemplate.Height = 28;
+            this.dgvIncome.Size = new System.Drawing.Size(800, 385);
+            this.dgvIncome.TabIndex = 0;
             // 
-            // FormExpense
+            // FormIncome
             // 
             this.ClientSize = new System.Drawing.Size(800, 600);
-            this.Controls.Add(this.dgvExpense);
+            this.Controls.Add(this.dgvIncome);
             this.Controls.Add(this.panelInput);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormExpense";
-            this.Text = "FormExpense";
+            this.Name = "FormIncome";
+            this.Text = "FormIncome";
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             this.panelInput.ResumeLayout(false);
             this.panelInput.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExpense)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIncome)).EndInit();
             this.ResumeLayout(false);
 
         }
